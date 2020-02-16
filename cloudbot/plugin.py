@@ -11,6 +11,7 @@ from typing import Optional
 from weakref import WeakValueDictionary
 
 import sqlalchemy
+
 from cloudbot.event import Event, PostHookEvent
 from cloudbot.plugin_hooks import hook_name_to_plugin
 from cloudbot.util import HOOK_ATTR, LOADED_ATTR, async_util, database

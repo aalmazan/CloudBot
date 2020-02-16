@@ -14,6 +14,7 @@ import json
 import re
 
 import requests
+
 from cloudbot import hook
 from cloudbot.util import formatting, web
 

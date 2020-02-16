@@ -1,10 +1,11 @@
 import re
 
 import requests
+from requests import HTTPError
+
 from cloudbot import hook
 from cloudbot.util.http import parse_soup
 from cloudbot.util.timeparse import time_parse
-from requests import HTTPError
 
 search_url = "http://dragonvale.wikia.com/api/v1/Search/list"
 

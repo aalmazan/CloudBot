@@ -15,6 +15,7 @@ License:
 """
 
 import requests
+
 from cloudbot import hook
 
 API_URL = "http://www.rrrather.com/botapi"

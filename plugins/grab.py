@@ -3,11 +3,12 @@ import random
 from collections import defaultdict
 from threading import RLock
 
+from sqlalchemy import Column, String, Table
+from sqlalchemy.exc import SQLAlchemyError
+
 from cloudbot import hook
 from cloudbot.util import database
 from cloudbot.util.pager import CommandPager, paginated_list
-from sqlalchemy import Column, String, Table
-from sqlalchemy.exc import SQLAlchemyError
 
 search_pages = defaultdict(dict)
 

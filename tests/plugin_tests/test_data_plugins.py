@@ -3,6 +3,7 @@ import importlib
 from unittest.mock import MagicMock
 
 import pytest
+
 from cloudbot.event import CommandEvent, Event
 from cloudbot.util.func_utils import call_with_args
 from plugins.attacks import ATTACKS, RespType

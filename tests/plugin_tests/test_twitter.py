@@ -2,8 +2,9 @@ from unittest.mock import MagicMock
 
 import pytest
 import tweepy
-from cloudbot.config import Config
 from responses import RequestsMock
+
+from cloudbot.config import Config
 
 
 @pytest.fixture()

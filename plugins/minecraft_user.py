@@ -2,6 +2,7 @@ import re
 import uuid
 
 import requests
+
 from cloudbot import hook
 
 HIST_API = "http://api.fishbans.com/history/{}"

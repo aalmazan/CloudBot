@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import pytest
+
 from cloudbot.util.http import compare_urls
 
 # Defined here because we use the same test cases for unescape

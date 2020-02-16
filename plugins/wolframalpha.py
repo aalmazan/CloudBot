@@ -2,10 +2,11 @@ import re
 import urllib.parse
 
 import requests
+from requests import HTTPError
+
 from cloudbot import hook
 from cloudbot.util import formatting, web
 from cloudbot.util.http import parse_xml
-from requests import HTTPError
 
 api_url = "http://api.wolframalpha.com/v2/query"
 query_url = "http://www.wolframalpha.com/input/?i={}"

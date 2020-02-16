@@ -1,10 +1,11 @@
 # Plugin by Infinity - <https://github.com/infinitylabs/UguuBot>
 import requests
+from sqlalchemy import Column, String, Table, select
+from yarl import URL
+
 from cloudbot import hook
 from cloudbot.util import colors, database
 from cloudbot.util.http import parse_soup
-from sqlalchemy import Column, String, Table, select
-from yarl import URL
 
 table = Table(
     "horoscope",

@@ -12,6 +12,7 @@ License:
 """
 
 import requests
+
 from cloudbot import hook
 from cloudbot.bot import bot
 from cloudbot.util import filesize, formatting

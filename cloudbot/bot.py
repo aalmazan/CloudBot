@@ -9,6 +9,12 @@ from functools import partial
 from pathlib import Path
 from typing import Type
 
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import scoped_session, sessionmaker
+from venusian import Scanner
+from watchdog.observers import Observer
+
 from cloudbot import clients
 from cloudbot.client import Client
 from cloudbot.config import Config
@@ -18,11 +24,6 @@ from cloudbot.plugin import PluginManager
 from cloudbot.reloader import ConfigReloader, PluginReloader
 from cloudbot.util import async_util, database, formatting
 from cloudbot.util.mapping import KeyFoldDict
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import scoped_session, sessionmaker
-from venusian import Scanner
-from watchdog.observers import Observer
 
 logger = logging.getLogger("cloudbot")
 

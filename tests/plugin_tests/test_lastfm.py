@@ -2,11 +2,12 @@ from json import JSONDecodeError
 
 import pytest
 import requests
+from requests import HTTPError
+from responses import RequestsMock
+
 from cloudbot.bot import bot
 from cloudbot.config import Config
 from plugins.lastfm import api_request
-from requests import HTTPError
-from responses import RequestsMock
 
 
 class MockConfig(Config):

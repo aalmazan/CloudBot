@@ -1,4 +1,5 @@
 import requests
+
 from cloudbot import hook
 
 api_url_metar = "http://api.av-wx.com/metar/"

@@ -1,9 +1,10 @@
 from datetime import datetime
 
 import requests
+from sqlalchemy import Column, PrimaryKeyConstraint, String, Table
+
 from cloudbot import hook
 from cloudbot.util import database, timeformat, web
-from sqlalchemy import Column, PrimaryKeyConstraint, String, Table
 
 api_url = "https://libre.fm/2.0/?format=json"
 

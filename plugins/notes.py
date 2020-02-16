@@ -1,11 +1,20 @@
 from datetime import datetime
 
 import sqlalchemy
+from sqlalchemy import (
+    Boolean,
+    Column,
+    DateTime,
+    Integer,
+    PrimaryKeyConstraint,
+    String,
+    Table,
+    not_,
+)
+from sqlalchemy.sql import select
+
 from cloudbot import hook
 from cloudbot.util import database
-from sqlalchemy import (Boolean, Column, DateTime, Integer,
-                        PrimaryKeyConstraint, String, Table, not_)
-from sqlalchemy.sql import select
 
 table = Table(
     "notes",

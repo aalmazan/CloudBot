@@ -2,9 +2,10 @@ import locale
 import math
 
 import requests
+from requests import HTTPError
+
 from cloudbot import hook
 from cloudbot.util.http import parse_soup
-from requests import HTTPError
 
 scrape_url = "http://www.myfitnesspal.com/food/diary/{}"
 

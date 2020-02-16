@@ -3,9 +3,10 @@ import re
 import time
 from collections import defaultdict
 
+from sqlalchemy import Column, PrimaryKeyConstraint, String, Table
+
 from cloudbot import hook
 from cloudbot.util import database
-from sqlalchemy import Column, PrimaryKeyConstraint, String, Table
 
 delay = 10
 floodcheck = {}

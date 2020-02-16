@@ -2,6 +2,7 @@ import urllib.parse
 
 import requests
 import requests.exceptions
+
 from cloudbot import hook
 from cloudbot.util.http import parse_soup
 

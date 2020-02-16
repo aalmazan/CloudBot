@@ -4,6 +4,7 @@ import logging
 import random
 
 import venusian
+
 from cloudbot.permissions import PermissionManager
 from cloudbot.util import async_util
 

@@ -4,14 +4,23 @@ from collections import defaultdict
 from threading import Lock
 from time import sleep, time
 
+from sqlalchemy import (
+    Boolean,
+    Column,
+    Integer,
+    PrimaryKeyConstraint,
+    String,
+    Table,
+    and_,
+    desc,
+)
+from sqlalchemy.sql import select
+
 from cloudbot import hook
 from cloudbot.event import EventType
 from cloudbot.util import database
 from cloudbot.util.formatting import pluralize_auto, truncate
 from cloudbot.util.func_utils import call_with_args
-from sqlalchemy import (Boolean, Column, Integer, PrimaryKeyConstraint, String,
-                        Table, and_, desc)
-from sqlalchemy.sql import select
 
 duck_tail = "・゜゜・。。・゜゜"
 duck = ["\\_o< ", "\\_O< ", "\\_0< ", "\\_\u00f6< ", "\\_\u00f8< ", "\\_\u00f3< "]

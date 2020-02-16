@@ -8,10 +8,11 @@ import traceback
 from functools import partial
 from pathlib import Path
 
+from irclib.parser import Message
+
 from cloudbot.client import Client, ClientConnectError, client
 from cloudbot.event import Event, EventType, IrcOutEvent
 from cloudbot.util import async_util
-from irclib.parser import Message
 
 logger = logging.getLogger("cloudbot")
 

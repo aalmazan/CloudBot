@@ -15,11 +15,12 @@ from operator import itemgetter
 from threading import RLock
 
 import requests
+from requests import Session
+from yarl import URL
+
 from cloudbot import hook
 from cloudbot.util import colors, web
 from cloudbot.util.func_utils import call_with_args
-from requests import Session
-from yarl import URL
 
 CURRENCY_SYMBOLS = {
     "USD": "$",

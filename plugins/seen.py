@@ -1,11 +1,11 @@
 import re
 import time
 
+from sqlalchemy import Column, Float, PrimaryKeyConstraint, String, Table, and_, select
+
 from cloudbot import hook
 from cloudbot.event import EventType
 from cloudbot.util import database, timeformat
-from sqlalchemy import (Column, Float, PrimaryKeyConstraint, String, Table,
-                        and_, select)
 
 table = Table(
     "seen_user",

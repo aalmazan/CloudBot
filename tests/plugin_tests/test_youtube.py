@@ -2,8 +2,9 @@ from copy import deepcopy
 from unittest.mock import MagicMock
 
 import pytest
-from cloudbot.bot import bot
 from responses import RequestsMock
+
+from cloudbot.bot import bot
 
 
 @pytest.fixture()

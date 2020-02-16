@@ -1,10 +1,19 @@
 from collections import OrderedDict
 
+from irclib.util.compare import match_mask
+from sqlalchemy import (
+    Boolean,
+    Column,
+    PrimaryKeyConstraint,
+    String,
+    Table,
+    UniqueConstraint,
+    and_,
+    select,
+)
+
 from cloudbot import hook
 from cloudbot.util import database, web
-from irclib.util.compare import match_mask
-from sqlalchemy import (Boolean, Column, PrimaryKeyConstraint, String, Table,
-                        UniqueConstraint, and_, select)
 
 table = Table(
     "ignored",

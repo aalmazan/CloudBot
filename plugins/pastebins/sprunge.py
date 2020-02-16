@@ -1,8 +1,8 @@
 import requests
-from cloudbot import hook
-from cloudbot.util.web import (Pastebin, ServiceError, ServiceHTTPError,
-                               pastebins)
 from requests import HTTPError, RequestException
+
+from cloudbot import hook
+from cloudbot.util.web import Pastebin, ServiceError, ServiceHTTPError, pastebins
 
 
 class Sprunge(Pastebin):

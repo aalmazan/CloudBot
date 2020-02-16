@@ -2,9 +2,10 @@ import datetime
 import re
 
 import requests
+from yarl import URL
+
 from cloudbot import hook
 from cloudbot.util.http import parse_soup
-from yarl import URL
 
 xkcd_re = re.compile(r"(.*:)//(www.xkcd.com|xkcd.com)(.*)", re.I)
 

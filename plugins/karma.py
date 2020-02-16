@@ -3,10 +3,18 @@ import re
 from collections import defaultdict
 
 import sqlalchemy
+from sqlalchemy import (
+    Column,
+    Integer,
+    PrimaryKeyConstraint,
+    String,
+    Table,
+    and_,
+    select,
+)
+
 from cloudbot import hook
 from cloudbot.util import database
-from sqlalchemy import (Column, Integer, PrimaryKeyConstraint, String, Table,
-                        and_, select)
 
 karmaplus_re = re.compile(r"^.*\+\+$")
 karmaminus_re = re.compile("^.*--$")

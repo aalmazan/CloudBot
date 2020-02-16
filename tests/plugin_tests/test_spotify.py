@@ -2,6 +2,7 @@ import importlib
 from unittest.mock import MagicMock
 
 import pytest
+
 from tests.util.mock_bot import MockBot
 
 

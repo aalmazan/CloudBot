@@ -1,10 +1,11 @@
 import re
 from collections import defaultdict
 
+from sqlalchemy import Column, PrimaryKeyConstraint, String, Table, select
+
 from cloudbot import hook
 from cloudbot.event import EventType
 from cloudbot.util import database
-from sqlalchemy import Column, PrimaryKeyConstraint, String, Table, select
 
 table = Table(
     "badwords",

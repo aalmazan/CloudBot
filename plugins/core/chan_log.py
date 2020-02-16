@@ -1,9 +1,10 @@
 import traceback
 from typing import Any, Iterable, List, Tuple
 
+from requests.exceptions import RequestException
+
 from cloudbot import hook
 from cloudbot.util import web
-from requests.exceptions import RequestException
 
 
 def get_attrs(obj: object) -> List[str]:

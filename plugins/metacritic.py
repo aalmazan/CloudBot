@@ -1,8 +1,9 @@
 import re
 
 import requests
-from cloudbot import hook
 from lxml import html
+
+from cloudbot import hook
 
 
 @hook.command("metacritic", "mc")

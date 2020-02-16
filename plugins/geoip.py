@@ -8,6 +8,7 @@ import time
 import geoip2.database
 import geoip2.errors
 import requests
+
 from cloudbot import hook
 from cloudbot.util import async_util
 

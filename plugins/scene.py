@@ -16,9 +16,10 @@ License:
 import datetime
 
 import requests
+from lxml import html
+
 from cloudbot import hook
 from cloudbot.util import timeformat
-from lxml import html
 
 
 @hook.command("pre", "scene")

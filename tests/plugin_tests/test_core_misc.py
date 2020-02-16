@@ -2,6 +2,7 @@ import asyncio
 from unittest.mock import MagicMock
 
 import pytest
+
 from cloudbot.client import Client
 
 pytestmark = pytest.mark.asyncio

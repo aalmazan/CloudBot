@@ -1,8 +1,9 @@
 import logging
 
+from sqlalchemy import Column, String, Table, UniqueConstraint
+
 from cloudbot import hook
 from cloudbot.util import database
-from sqlalchemy import Column, String, Table, UniqueConstraint
 
 table = Table(
     "regex_chans",

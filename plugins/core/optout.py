@@ -5,15 +5,15 @@ from collections import defaultdict
 from functools import total_ordering
 from threading import RLock
 
+from irclib.util.compare import match_mask
+from sqlalchemy import Boolean, Column, PrimaryKeyConstraint, String, Table, and_
+
 from cloudbot import hook
 from cloudbot.hook import Priority
 from cloudbot.util import database, web
 from cloudbot.util.formatting import gen_markdown_table
 from cloudbot.util.mapping import DefaultKeyFoldDict
 from cloudbot.util.text import parse_bool
-from irclib.util.compare import match_mask
-from sqlalchemy import (Boolean, Column, PrimaryKeyConstraint, String, Table,
-                        and_)
 
 optout_table = Table(
     "optout",

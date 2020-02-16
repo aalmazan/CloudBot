@@ -1,7 +1,8 @@
 import socket
 
-from cloudbot import hook
 from mcstatus import MinecraftServer
+
+from cloudbot import hook
 
 mc_colors = [
     ("\xa7f", "\x0300"),

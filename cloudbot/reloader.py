@@ -2,8 +2,9 @@ import asyncio
 from abc import ABC
 from pathlib import Path
 
-from cloudbot.util import async_util
 from watchdog.events import PatternMatchingEventHandler
+
+from cloudbot.util import async_util
 
 
 class Reloader(ABC):

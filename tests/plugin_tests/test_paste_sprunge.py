@@ -1,6 +1,7 @@
 import importlib
 
 import pytest
+
 from cloudbot.util import web
 from plugins.pastebins import sprunge
 

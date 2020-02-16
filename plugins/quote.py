@@ -2,12 +2,20 @@ import random
 import re
 import time
 
-from cloudbot import hook
-from cloudbot.util import database
-from sqlalchemy import (Boolean, Column, PrimaryKeyConstraint, String, Table,
-                        not_, select)
+from sqlalchemy import (
+    Boolean,
+    Column,
+    PrimaryKeyConstraint,
+    String,
+    Table,
+    not_,
+    select,
+)
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.types import REAL
+
+from cloudbot import hook
+from cloudbot.util import database
 
 qtable = Table(
     "new_quote",

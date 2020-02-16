@@ -1,10 +1,11 @@
 import re
 
 import requests
+from requests import HTTPError
+
 from cloudbot import hook
 from cloudbot.util import colors, formatting, web
 from cloudbot.util.http import parse_soup
-from requests import HTTPError
 
 SEARCH_URL = "http://www.amazon.{}/s/"
 REGION = "com"

@@ -1,11 +1,12 @@
 import itertools
 from operator import attrgetter
 
+from sqlalchemy import Boolean, Column, PrimaryKeyConstraint, String, Table
+
 from cloudbot import hook
 from cloudbot.event import CommandEvent
 from cloudbot.util import database
 from cloudbot.util.formatting import chunk_str, pluralize_auto
-from sqlalchemy import Boolean, Column, PrimaryKeyConstraint, String, Table
 
 commands = Table(
     "chain_commands",

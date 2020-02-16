@@ -3,11 +3,12 @@ from datetime import datetime, timedelta
 from threading import RLock
 
 import requests
-from cloudbot import hook
-from cloudbot.bot import bot
 from requests import HTTPError
 from requests.auth import HTTPBasicAuth
 from yarl import URL
+
+from cloudbot import hook
+from cloudbot.bot import bot
 
 spotify_re = re.compile(r"(spotify:(track|album|artist|user):([a-zA-Z0-9]+))", re.I)
 http_re = re.compile(

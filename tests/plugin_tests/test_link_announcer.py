@@ -4,9 +4,15 @@ from unittest.mock import MagicMock
 import pytest
 import requests
 from bs4 import BeautifulSoup
-from plugins.link_announcer import (MAX_TITLE, get_encoding, parse_content,
-                                    print_url_title, url_re)
 from responses import RequestsMock
+
+from plugins.link_announcer import (
+    MAX_TITLE,
+    get_encoding,
+    parse_content,
+    print_url_title,
+    url_re,
+)
 
 MATCHES = (
     "http://foo.com/blah_blah",

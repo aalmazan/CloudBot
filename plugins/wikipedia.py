@@ -4,6 +4,7 @@ Scaevolus 2009"""
 import re
 
 import requests
+
 from cloudbot import hook
 from cloudbot.util import formatting
 from cloudbot.util.http import parse_xml

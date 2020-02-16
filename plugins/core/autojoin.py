@@ -3,10 +3,11 @@ from collections import defaultdict
 from copy import copy
 from threading import RLock
 
-from cloudbot import hook
-from cloudbot.util import database
 from sqlalchemy import Column, PrimaryKeyConstraint, String, Table, and_
 from sqlalchemy.exc import IntegrityError
+
+from cloudbot import hook
+from cloudbot.util import database
 
 table = Table(
     "autojoin",

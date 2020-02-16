@@ -14,6 +14,7 @@ License:
 """
 
 import requests
+
 from cloudbot import hook
 from cloudbot.bot import bot
 

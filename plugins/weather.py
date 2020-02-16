@@ -3,11 +3,12 @@ from fractions import Fraction
 from typing import Optional
 
 import googlemaps
-from cloudbot import hook
-from cloudbot.util import colors, database, web
 from forecastiopy.ForecastIO import ForecastIO
 from googlemaps.exceptions import ApiError
 from sqlalchemy import Column, PrimaryKeyConstraint, String, Table
+
+from cloudbot import hook
+from cloudbot.util import colors, database, web
 
 Api = Optional[googlemaps.Client]
 

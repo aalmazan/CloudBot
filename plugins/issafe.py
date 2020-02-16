@@ -12,8 +12,9 @@ License:
 
 from urllib.parse import urlparse
 
-import cloudbot
 import requests
+
+import cloudbot
 from cloudbot import hook
 from cloudbot.bot import bot
 

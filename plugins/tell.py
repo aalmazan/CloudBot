@@ -3,13 +3,22 @@ from datetime import datetime
 from fnmatch import fnmatch
 
 import sqlalchemy as sa
+from sqlalchemy import (
+    Boolean,
+    Column,
+    DateTime,
+    PrimaryKeyConstraint,
+    String,
+    Table,
+    and_,
+    not_,
+)
+from sqlalchemy.sql import select
+
 from cloudbot import hook
 from cloudbot.event import EventType
 from cloudbot.util import database, timeformat, web
 from cloudbot.util.formatting import gen_markdown_table
-from sqlalchemy import (Boolean, Column, DateTime, PrimaryKeyConstraint,
-                        String, Table, and_, not_)
-from sqlalchemy.sql import select
 
 table = Table(
     "tells",

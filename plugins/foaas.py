@@ -3,6 +3,7 @@ import random
 from pathlib import Path
 
 import requests
+
 from cloudbot import hook
 
 BASE_URL = "http://www.foaas.com/{fuck}/{target}"

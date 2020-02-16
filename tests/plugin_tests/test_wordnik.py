@@ -3,6 +3,7 @@ from unittest.mock import MagicMock
 
 import pytest
 import requests
+
 from cloudbot.bot import bot
 from plugins import wordnik
 

@@ -14,13 +14,14 @@ from contextlib import suppress
 from numbers import Number
 from operator import attrgetter
 
+from irclib.parser import Prefix
+
 import cloudbot.bot
 from cloudbot import hook
 from cloudbot.client import Client
 from cloudbot.clients.irc import IrcClient
 from cloudbot.util import web
 from cloudbot.util.mapping import KeyFoldDict, KeyFoldMixin
-from irclib.parser import Prefix
 
 logger = logging.getLogger("cloudbot")
 

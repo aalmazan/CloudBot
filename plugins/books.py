@@ -1,8 +1,9 @@
 import requests
+from requests import HTTPError
+
 from cloudbot import hook
 from cloudbot.bot import bot
 from cloudbot.util import formatting, web
-from requests import HTTPError
 
 base_url = "https://www.googleapis.com/books/v1/"
 book_search_api = base_url + "volumes?"

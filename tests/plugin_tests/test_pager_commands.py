@@ -1,6 +1,7 @@
 import importlib
 
 import pytest
+
 from cloudbot.util.pager import CommandPager
 
 

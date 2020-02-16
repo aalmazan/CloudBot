@@ -5,6 +5,7 @@ from contextlib import contextmanager
 from unittest.mock import MagicMock, call
 
 import pytest
+
 from cloudbot.util import database
 from plugins import remind
 from tests.util.mock_bot import MockBot

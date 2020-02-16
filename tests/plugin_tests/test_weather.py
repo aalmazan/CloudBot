@@ -4,10 +4,11 @@ from copy import deepcopy
 from unittest.mock import MagicMock, patch
 
 import pytest
+from googlemaps.exceptions import ApiError
+
 from cloudbot.config import Config
 from cloudbot.event import CommandEvent
 from cloudbot.util.func_utils import call_with_args
-from googlemaps.exceptions import ApiError
 
 
 class MockConfig(Config):
