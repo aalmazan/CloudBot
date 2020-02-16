@@ -1,8 +1,7 @@
 import time
-
-import pytest
 from unittest.mock import patch
 
+import pytest
 from cloudbot.util import tokenbucket
 
 
@@ -62,7 +61,7 @@ class MockTime:
 @pytest.fixture()
 def mock_time():
     mocked = MockTime()
-    with patch.object(tokenbucket, 'time', mocked.get):
+    with patch.object(tokenbucket, "time", mocked.get):
         yield mocked
 
 

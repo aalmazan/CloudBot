@@ -3,11 +3,10 @@ import logging
 from collections import ChainMap
 from functools import partial
 
-from irclib.parser import CapList
-
 from cloudbot import hook
 from cloudbot.event import CapEvent
 from cloudbot.util import async_util
+from irclib.parser import CapList
 
 logger = logging.getLogger("cloudbot")
 
@@ -36,7 +35,7 @@ async def handle_available_caps(conn, caplist, event, irc_paramlist, bot):
             cap_queue[name_cf] = async_util.create_future(conn.loop)
             conn.cmd("CAP", "REQ", cap)
 
-    if irc_paramlist[2] != '*':
+    if irc_paramlist[2] != "*":
         await asyncio.gather(*cap_queue.values())
         cap_queue.clear()
         conn.send("CAP END")
@@ -73,7 +72,7 @@ async def cap_ls(conn, caplist, event, irc_paramlist, bot):
 
 
 async def handle_req_resp(enabled, conn, caplist, event, bot):
-    server_caps = conn.memory.setdefault('server_caps', {})
+    server_caps = conn.memory.setdefault("server_caps", {})
     cap_queue = conn.memory.get("cap_queue", {})
     caps = (cap.name.casefold() for cap in caplist)
     for cap in caps:
@@ -115,7 +114,7 @@ async def cap_new(caplist, conn, event, bot, irc_paramlist):
 def cap_del(conn, caplist):
     # TODO add hooks for CAP removal
     logger.info("[%s|cap] Capabilities removed by server: %s", conn.name, caplist)
-    server_caps = conn.memory.setdefault('server_caps', {})
+    server_caps = conn.memory.setdefault("server_caps", {})
     for cap in caplist:
         server_caps[cap.name.casefold()] = False
 

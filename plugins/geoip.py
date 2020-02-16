@@ -8,7 +8,6 @@ import time
 import geoip2.database
 import geoip2.errors
 import requests
-
 from cloudbot import hook
 from cloudbot.util import async_util
 
@@ -31,8 +30,8 @@ def fetch_db():
         os.remove(PATH)
     r = requests.get(DB_URL, stream=True)
     if r.status_code == 200:
-        with gzip.open(r.raw, 'rb') as infile:
-            with open(PATH, 'wb') as outfile:
+        with gzip.open(r.raw, "rb") as infile:
+            with open(PATH, "wb") as outfile:
                 shutil.copyfileobj(infile, outfile)
 
 
@@ -94,7 +93,7 @@ async def geoip(text, reply, loop):
     data = {
         "cc": location_data.country.iso_code or "N/A",
         "country": location_data.country.name or "Unknown",
-        "city": location_data.city.name or "Unknown"
+        "city": location_data.city.name or "Unknown",
     }
 
     # add a region to the city if one is listed

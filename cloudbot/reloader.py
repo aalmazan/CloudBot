@@ -2,9 +2,8 @@ import asyncio
 from abc import ABC
 from pathlib import Path
 
-from watchdog.events import PatternMatchingEventHandler
-
 from cloudbot.util import async_util
+from watchdog.events import PatternMatchingEventHandler
 
 
 class Reloader(ABC):
@@ -14,7 +13,7 @@ class Reloader(ABC):
         self.event_handler = handler(self, patterns=[pattern])
         self.watch = None
 
-    def start(self, path='.'):
+    def start(self, path="."):
         self.watch = self.observer.schedule(
             self.event_handler, path=path, recursive=self.recursive
         )

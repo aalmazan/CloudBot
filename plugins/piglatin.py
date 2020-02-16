@@ -17,7 +17,6 @@ License:
 import string
 
 import nltk
-
 from cloudbot import hook
 
 pronunciations = {}
@@ -25,6 +24,7 @@ pronunciations = {}
 
 # Translate functions by J.F. Sebastian
 # <https://stackoverflow.com/questions/22773826/pig-latin-translator>
+
 
 def translate(word):
     word = word.lower()  # NOTE: ignore Unicode casefold
@@ -63,7 +63,7 @@ def translate_basic(word, vowels="aeiou", start=0):
 
 @hook.on_start()
 def load_nltk():
-    nltk.download('cmudict')
+    nltk.download("cmudict")
 
     pronunciations.clear()
     pronunciations.update(nltk.corpus.cmudict.dict())

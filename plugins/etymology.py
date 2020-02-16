@@ -9,11 +9,10 @@ Authors:
 import re
 
 import requests
-from requests import HTTPError
-
 from cloudbot import hook
 from cloudbot.util import formatting, web
 from cloudbot.util.http import parse_soup
+from requests import HTTPError
 
 
 @hook.command("e", "etymology")
@@ -23,7 +22,7 @@ def etymology(text, reply):
     :type text: str
     """
 
-    url = 'http://www.etymonline.com/index.php'
+    url = "http://www.etymonline.com/index.php"
 
     response = requests.get(url, params={"term": text})
 
@@ -40,13 +39,13 @@ def etymology(text, reply):
 
     soup = parse_soup(response.text)
 
-    block = soup.find('div', class_=re.compile("word--.+"))
+    block = soup.find("div", class_=re.compile("word--.+"))
 
-    etym = ' '.join(e.text for e in block.div)
+    etym = " ".join(e.text for e in block.div)
 
-    etym = ' '.join(etym.splitlines())
+    etym = " ".join(etym.splitlines())
 
-    etym = ' '.join(etym.split())
+    etym = " ".join(etym.split())
 
     etym = formatting.truncate(etym, 200)
 

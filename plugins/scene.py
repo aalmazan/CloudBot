@@ -16,10 +16,9 @@ License:
 import datetime
 
 import requests
-from lxml import html
-
 from cloudbot import hook
 from cloudbot.util import timeformat
+from lxml import html
 
 
 @hook.command("pre", "scene")
@@ -30,7 +29,7 @@ def pre(text, reply):
         request = requests.get("http://orlydb.com/", params={"q": text})
         request.raise_for_status()
     except requests.exceptions.HTTPError as e:
-        reply('Unable to fetch results: {}'.format(e))
+        reply("Unable to fetch results: {}".format(e))
         raise
 
     h = html.fromstring(request.text)
@@ -53,8 +52,8 @@ def pre(text, reply):
 
     size = result.xpath("span[@class='inforight']//text()")
     if size:
-        size = ' - ' + size[0].split()[0]
+        size = " - " + size[0].split()[0]
     else:
-        size = ''
+        size = ""
 
-    return '{} - {}{} - {} ({} ago)'.format(section, name, size, date_string, since)
+    return "{} - {}{} - {} ({} ago)".format(section, name, size, date_string, since)
