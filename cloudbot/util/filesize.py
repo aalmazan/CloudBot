@@ -101,7 +101,7 @@ si = (
 T = traditional
 A = alternative
 V = verbose
-I = iec
+I = iec  # noqa: E741
 S = si
 
 

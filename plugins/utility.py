@@ -313,12 +313,12 @@ def rainbow(text):
     text = strip(text)
     col = list(COLORS.items())
     out = ""
-    l = len(COLORS)
+    num_colors = len(COLORS)
     for i, t in enumerate(text):
         if t == " ":
             out += t
         else:
-            out += col[i % l][1] + t
+            out += col[i % num_colors][1] + t
     return out
 
 
@@ -329,9 +329,9 @@ def wrainbow(text):
     col = list(COLORS.items())
     text = strip(text).split(" ")
     out = []
-    l = len(COLORS)
+    num_colors = len(COLORS)
     for i, t in enumerate(text):
-        out.append(col[i % l][1] + t)
+        out.append(col[i % num_colors][1] + t)
     return " ".join(out)
 
 
@@ -340,10 +340,10 @@ def usa(text):
     """<text> - Makes <text> more patriotic."""
     text = strip(text)
     c = [COLORS["red"], "\x0300", COLORS["blue"]]
-    l = len(c)
+    num_colors = len(c)
     out = ""
     for i, t in enumerate(text):
-        out += c[i % l] + t
+        out += c[i % num_colors] + t
     return out
 
 
