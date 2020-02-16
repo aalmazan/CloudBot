@@ -2,5 +2,11 @@ version: '3.3'
 
 services:
   sut:
-    build: .
-    command: pipenv -m pytest
+    build:
+      context: .
+      args:
+        - APP_USER=testing
+    command: pipenv run python -m pytest
+    volumes:
+      - ./tests:/home/testing/tests
+      - ./pytest.ini:/home/testing/pytest.ini

@@ -1,5 +1,7 @@
 FROM python:3.7-slim
 
+ARG APP_USER=gonzobot
+
 # install things:
 # libenchant1c2a    pyenchant dependency
 # libxml2-dev       python-lxml dependency
@@ -16,7 +18,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN pip install --upgrade pip
 
-ENV APP_USER=gonzobot
 RUN groupadd --gid=111 $APP_USER
 RUN useradd --gid=111 --uid=111 --create-home $APP_USER
 
