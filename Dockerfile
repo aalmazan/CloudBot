@@ -1,5 +1,7 @@
 FROM python:3.7-slim
 
+ARG APP_USER=gonzobot
+
 # install things:
 # libenchant1c2a    pyenchant dependency
 # libxml2-dev       python-lxml dependency
@@ -16,7 +18,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN pip install --upgrade pip
 
-ENV APP_USER=gonzobot
 RUN groupadd --gid=111 $APP_USER
 RUN useradd --gid=111 --uid=111 --create-home $APP_USER
 
@@ -38,9 +39,9 @@ COPY --chown=111:111 Pipfile.lock /home/$APP_USER
 # This is a dev version of the Dockerfile, so we also need the dev dependencies
 RUN set -ex && /home/$APP_USER/.local/bin/pipenv install --pre --deploy --dev
 
-COPY cloudbot /home/$APP_USER/cloudbot
-COPY data /home/$APP_USER/data
-COPY plugins  /home/$APP_USER/plugins
+COPY --chown=111:111 cloudbot /home/$APP_USER/cloudbot
+COPY --chown=111:111 data /home/$APP_USER/data
+COPY --chown=111:111 plugins  /home/$APP_USER/plugins
 
 ENTRYPOINT ["pipenv", "run", "python", "-m", "cloudbot"]
 
